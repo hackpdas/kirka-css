@@ -1,0 +1,580 @@
+:root {
+    /*Change these values to customize your Kirka style!*/
+    
+    /*Primary color*/
+    --baseColor: #252525;
+    --baseColorRGB: 37, 37, 37;
+    
+    /*Secondary color*/
+    --accentColor: #0ff;
+    --accentColorRGB: 81, 0, 22;
+    
+    /*Background image url*/
+    --bg-url: url(https://cdn.discordapp.com/attachments/929827473351385089/929839478003081216/Kirtkraka.png);
+    
+    /*Foreground image url*/
+    --fg-url: url(https://cdn.discordapp.com/attachments/762121883230797854/929600691780083792/kirka_bg.png);
+    /*Does the forground not fit how you want it to? Scroll down to the Foreground Image / Animation and edit the values of "left" and "top"*/
+    /*I may move those values here, so you don't need to scroll down*/
+    
+    /*Center dot size*/
+    --dotSize: 0.2rem;
+    /*Set to 0rem to disable*/
+    
+    /*Height of your chat in a match*/
+    --chatMaxHeight: 10rem;
+    /*Default is 20rem*/
+    
+    /*Width of your chat in a match*/
+    --chatWidth: 21rem;
+    /*Default is 30rem*/
+    
+    /*In Match ESC menu blur*/
+    --blur: 0.1rem;
+    /*Default is 0.5*/
+    
+    /*The following values are still being worked on*/
+    --showFPS: 1;
+    /*1 = on, 0 = off*/
+    
+    --showFPSAvg: 1;
+    /*1 = on, 0 = off*/
+    
+    --showPing: 1;
+    /*1 = on, 0 = off*/
+    
+    --showTriangles: 1;
+    /*1 = on, 0 = off*/
+}
+
+/*Background Image / Animation*/
+.background[data-v-a32bad04]{
+    background: var(--bg-url) repeat;
+    animation: scroll 100s linear infinite;
+}
+
+/*Foreground Image / Animation*/
+.pattern-bg[data-v-a32bad04] {
+    background: var(--fg-url);
+    background-repeat: repeat-y;
+    animation: none;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    top: 10%;
+}
+
+/*Top to Bottom scroll Animation*/
+@keyframes scroll {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 0 1000%;
+    }
+}
+
+/*Sideways scroll Animation*/
+@keyframes LRscroll {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 1000% 0;
+    }
+}
+
+/*Twitch Livestreams title*/
+.head[data-v-4e2ec512],
+
+/*Twitch Livesteams list*/
+.list[data-v-4e2ec512],
+
+/*Twitch Logo? Doesn't seem to work*/
+/*.logo[data-v-4520d328],*/
+/*Not sure what this is, doesn't change anything*/
+/*.bg-radial[data-v-4520d328],*/
+/*Not sure what this is, doesn't change anything*/
+/*.bg-gradient[data-v-174cb81c],*/
+/*Not sure what this is, doesn't change anything*/
+/*.gun-img[data-v-174cb81c],*/
+/*Not sure what this is, doesn't change anything*/
+/*.chests[data-v-174cb81c],*/
+
+/*'Check Progress' bar on profile banner (Checks level progress)*/
+.progress-label[data-v-9dd62bd0],
+
+/*Not sure what this is, doesn't change anything*/
+/*.info[data-v-43caa132],*/
+/*Not sure what this is, doesn't change anything*/
+.background[data-v-6b95486e] {
+    display: none !important;
+}
+
+.avatar-info[data-v-9dd62bd0] {
+    height: 7.5rem;
+    width: 7.5rem;
+}
+.user-info[data-v-9dd62bd0] {
+    height: 5rem;
+}
+.systems[data-v-2bcdf8f9] {
+    height: 2rem;
+    margin-top: -2rem;
+    margin-left: 8rem;
+}
+.user-info[data-v-9dd62bd0] {
+    width: 17rem;
+}
+
+.background[data-v-7a2de70d],
+.container[data-v-7a2de70d],
+.leaderboard-cont[data-v-f110cb4e],
+.preview[data-v-51c089b2],
+.img-bg[data-v-51c089b2],
+.clans[data-v-3a66d112],
+.chat[data-v-51c089b2],
+.messages[data-v-27dba9d0],
+.card-cont[data-v-040b7087],
+.settings[data-v-d9238ce6],
+.esc-interface[data-v-b427fee8],
+.right-container[data-v-b427fee8],
+.container-card[data-v-747e6ab9],
+.add-friends[data-v-4d25bc18],
+.avatar[data-v-2fe1d78c],
+.bottom[data-v-2fe1d78c],
+.subjects[data-v-2fe1d78c],
+.player[data-v-6b95486e] {
+    background: transparent !important;
+    box-shadow: none;
+    backdrop-filter: blur(0.5rem);
+    border: none;
+}
+
+.card-cont[data-v-47a01a9a],
+.icon-btn[data-v-45658db6],
+.card[data-v-41938989],
+.top-bar[data-v-0238bf17],
+.messages[data-v-76a3fe0a],
+.player[data-v-6b95486e] {
+    background: rgba(0, 0, 0, .25) !important;
+    backdrop-filter: blur(0.25rem);
+    border-radius: 1rem;
+}
+
+.left-interface[data-v-a32bad04] {
+    position: absolute;
+    left: 0%;
+}
+
+.progress-line[data-v-5aafd15a],
+.top-items[data-v-0926e915],
+.list-cont[data-v-0926e915],
+.info-awards[data-v-f110cb4e],
+.reset-time[data-v-174cb81c],
+.champions-list[data-v-8a6d4c66],
+.description[data-v-040b7087],
+.all-scores[data-v-040b7087],
+.champions-stat[data-v-040b7087],
+.list-container[data-v-3bcb580a],
+.input[data-v-595c2068],
+.player[data-v-b427fee8],
+.hp-title[data-v-57051149],
+.head-text[data-v-4d25bc18],
+.tabs[data-v-3547fad6],
+.tab-bar[data-v-3d11cf09],
+.tab[data-v-3d11cf09],
+.box[data-v-21e538bc],
+.friend[data-v-f404d03e],
+.level-cont[data-v-f404d03e],
+.add[data-v-f404d03e],
+.delete[data-v-f404d03e],
+.bg[data-v-1d4749de],
+.kill-bar-item[data-v-6200f284] {
+    background-color: var(--baseColor) !important;
+    box-shadow: none;
+    border: none;
+}
+
+.text[data-v-02c36fca],
+.clan-tag[data-v-26ce3560],
+.clan-tag[data-v-41938989],
+.clan-tag[data-v-f110cb4e],
+.label-primary[data-v-f110cb4e],
+.awards-span[data-v-f110cb4e],
+.top-name[data-v-0926e915],
+.active[data-v-3a66d112],
+.nav[data-v-3a66d112]:hover,
+.list-labels[data-v-8a6d4c66],
+.map-name[data-v-51c089b2],
+.champions-league[data-v-040b7087],
+.champions-scores[data-v-040b7087],
+.all-scores-label[data-v-040b7087],
+.primary[data-v-3bcb580a],
+.labels[data-v-3bcb580a],
+.disable[data-v-038aad28],
+.level-text[data-v-9dd62bd0],
+.header[data-v-2f6eb6f6],
+.stat-name[data-v-41938989],
+.progress-level-value[data-v-41938989],
+.label[data-v-b427fee8],
+.header[data-v-21e538bc],
+.primary[data-v-b427fee8],
+.mod[data-v-4520d328]:hover,
+.head[data-v-f5d2b02e] {
+    color: var(--accentColor) !important;
+}
+
+.levels[data-v-26ce3560],
+.levels[data-v-41938989],
+.level-value[data-v-9dd62bd0],
+.server[data-v-51c089b2],
+.online[data-v-51c089b2],
+.lvl-leader[data-v-f110cb4e],
+.active-tab[data-v-3547fad6],
+.tab[data-v-3547fad6]:hover,
+.level[data-v-2fe1d78c],
+.home[data-v-0238bf17]:hover {
+    background-color: var(--baseColor);
+    color: var(--accentColor);
+}
+
+.select-mods-cont[data-v-4520d328],
+.select-regions-cont[data-v-4520d328],
+.input[data-v-6b8c8819],
+.item[data-v-0926e915],
+.items .item[data-v-8a6d4c66],
+.item-content[data-v-3bcb580a],
+.input[data-v-a0b6da4a],
+.input[data-v-595c2068],
+.add[data-v-f404d03e]:hover,
+.delete[data-v-f404d03e]:hover,
+.gun[data-v-b427fee8] {
+    background: var(--baseColor) !important;
+    border: 0.15rem solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.avatar-info[data-v-9dd62bd0]:hover,
+.user-info[data-v-9dd62bd0]:hover,
+.label-card[data-v-2bcdf8f9]:hover,
+.inventory-card[data-v-d9238ce6]:hover,
+.select-mod[data-v-d9238ce6]:hover,
+.selected[data-v-2fe1d78c],
+.selected[data-v-b427fee8],
+::-webkit-scrollbar-thumb {
+    background-color: var(--accentColor);
+}
+
+.icon-btn[data-v-45658db6]:hover,
+.icon-btn[data-v-45658db6]:hover,
+.active[data-v-ce054580],
+.tab[data-v-ce054580]:hover,
+.server[data-v-51c089b2]:hover,
+.tab[data-v-3547fad6]:hover,
+.active-tab[data-v-3547fad6],
+.tab[data-v-3d11cf09]:hover {
+    border-top: 0.25rem solid var(--accentColor);
+    background-color: var(--baseColor);
+    color: var(--accentColor);
+}
+
+/*Left side icons (Store, Servers, Map, News)*/
+.left-icons[data-v-a32bad04] {
+    margin-top: 10rem;
+}
+
+.icon-btn[data-v-45658db6] {
+    width: 8rem;
+    height: 8rem;
+    margin-top: 1rem;
+}
+
+.icon[data-v-45658db6] {
+    margin-top: 0;
+}
+
+.card-cont[data-v-47a01a9a],
+.icon-btn[data-v-45658db6] {
+    border-bottom: none;
+    border-top: none;
+    box-shadow: none;
+}
+
+.home[data-v-0238bf17],
+.tabs[data-v-ce054580],
+.active[data-v-ce054580],
+.tab[data-v-ce054580]:hover {
+    background: var(--baseColor);
+    border-right: 0.125rem solid rgba(255, 255, 255, 0.1);
+}
+
+.progress[data-v-5aafd15a],
+.rules-icon[data-v-51c089b2] {
+    background-color: var(--accentColor);
+}
+
+.button[data-v-02c36fca] {
+    background-color: var(--baseColor) !important;
+    --hover-color: rgba(var(--baseColorRGB), 0.5) !important;
+    --top: rgba(255, 255, 255, 0.1) !important;
+    --bottom: rgba(0, 0, 0, 0.2) !important;
+}
+
+.active[data-v-ce054580],
+.tab[data-v-ce054580]:hover {
+    background-color: var(--baseColor);
+    color: var(--accentColor);
+}
+
+.info-key-cont[data-v-0686a978],
+.progress-helper[data-v-27921169],
+.progress[data-v-27921169],
+.lvl[data-v-27921169],
+.buy-btn[data-v-27921169],
+.level-progress[data-v-dc99bd6e],
+.endurance-progress[data-v-57051149] {
+    background: var(--accentColor);
+    color: white;
+    box-shadow: none;
+}
+
+.level[data-v-b427fee8],
+.btn-invite[data-v-b427fee8]:first-of-type {
+    background-color: var(--baseColor);
+    color: var(--accentColor);
+    border: 0.15rem solid rgba(255, 255, 255, 0.1);
+}
+
+.state[data-v-57051149] {
+    opacity: 1;
+    left: 45rem;
+}
+
+.cont-endurance[data-v-57051149],
+.cont-hp[data-v-57051149] {
+    background: transparent;
+}
+
+.input-wrapper[data-v-6b8c8819] {
+    position: absolute;
+    bottom: -3.5rem;
+}
+
+.messages[data-v-76a3fe0a] {
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -0.5rem;
+    max-width: 35rem;
+}
+
+.gun[data-v-2fe1d78c],
+.subject[data-v-2fe1d78c] {
+    background: var(--baseColor);
+}
+
+.item-name[data-v-2fe1d78c] {
+    left: 1rem;
+}
+
+.active[data-v-3d11cf09] {
+    background-color: var(--baseColor);
+    color: var(--accentColor);
+    border-bottom: var(--accentColor) solid 0.125rem;
+}
+
+.select-mod[data-v-a32bad04],
+.select-region[data-v-a32bad04],
+.select-mod[data-v-a32bad04]:hover,
+.select-region[data-v-a32bad04]:hover,
+hr[data-v-a32bad04],
+.custom-checkbox > input:not(:disabled):not(:checked) + span[data-v-47e1b746]:before,
+.custom-checkbox > input:not(:disabled):not(:checked) + span[data-v-47e1b746]:hover:before {
+    background: var(--baseColor);
+    border: 0.125rem solid rgba(255, 255, 255, 0.1);
+}
+
+.custom-checkbox > input:checked + span[data-v-47e1b746]:before {
+    background-color: var(--accentColor);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+#ad-bottom[data-v-a32bad04],
+#ad-left[data-v-a32bad04] {
+    max-width: 0px;
+}
+
+/*Made By: Dwizzen*/
+body:before {
+    color: #0ff;
+    content: "Made By: Amadu Stickler BETA V1.2";
+    text-align: left;
+    background: #fff0;
+    border: none;
+    background-size: 10rem, 2rem;
+    height: 2rem;
+    width: 9rem;
+    position: absolute;
+    left: 26rem;
+    top: 1.25rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1000 !important;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+/*Center Dot*/
+body:after {
+    border-radius: 200px;
+    content: " ";
+    background: var(--accentColor);
+    border: 1px solid black;
+    background-size: var(--dotSize), var(--dotSize);
+    width: var(--dotSize);
+    height: var(--dotSize);
+    position: fixed;
+    left: 50%;
+    bottom: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translate(-50%, 50%);
+    z-index: 999 !important;
+}
+
+.select-region[data-v-a32bad04]:before {
+    background-color: #fff0;
+    content: var(--temp);
+}
+
+
+/*Show titles for objects*/
+/*
+div:before {
+  content: attr(class);
+}
+*/
+
+
+/*-----in esc menu-----*/
+/*"Players" text top left*/
+.players-label[data-v-b427fee8] {
+    margin-top: 5rem;
+    font-size: 2rem;
+    color: #0ff;
+}
+
+/*"Change Players" text top right*/
+.head[data-v-b427fee8] {
+    color: #0ff;
+}
+
+
+/*Gun Names*/
+.gun-name[data-v-b427fee8] {
+    color: #0ff;
+}
+
+/*Continue Button*/
+.button[data-v-02c36fca] {
+    background-color: var(--baseColor) !important;
+    --hover-color: rgba(var(--baseColorRGB), 0.5) !important;
+    --top: rgba(255, 255, 255, 0.1) !important;
+    --bottom: rgba(0, 0, 0, 0.2) !important;
+}
+
+/*-----game interface-----*/
+/*Chat*/
+/*.chat-position[data-v-6a4c5c6d],*/
+.messages[data-v-76a3fe0a],
+.chat[data-v-43caa132] {
+    max-height: var(--chatMaxHeight);
+    width: var(--chatWidth);
+}
+
+/*Info above chat*/
+.info[data-v-43caa132] {
+    position: absolute;
+    bottom: 12rem;
+}
+
+/*Map Name*/
+.name[data-v-2bbf437a] {
+    color: var(--white);
+    position: absolute;
+    left: 12rem;
+    top: -0.2rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: .065em;
+}
+
+/*Timer Text*/
+.timer[data-v-1d4749de] {
+    font-size: 2.25rem;
+    margin-bottom: 0.75rem;
+}
+
+/*Kill Text*/
+.kill[data-v-1d4749de] {
+    color: lime
+}
+
+/*Death Text*/
+.death[data-v-1d4749de] {
+    color: red
+}
+
+/*Stamina*/
+.cont-endurance[data-v-57051149], .cont-hp[data-v-57051149] {
+    background: transparent;
+}
+
+/*Stamina %*/
+.endurance-progress[data-v-57051149] {
+    border-radius: 0.188rem;
+    background: #3ca1ff;
+    height: 0.7rem;
+    transition: width .6s ease;
+}
+
+/*HP Name*/
+.hp-title[data-v-57051149] {
+    font-size: 2.2rem;
+    font-weight: 700;
+    background: var(--secondary-1);
+    border-radius: 0.188rem;
+    padding: 0 0.4rem;
+}
+
+/*HP bar*/
+.cont-hp[data-v-57051149] {
+    background: var(--secondary-1);
+    border-radius: 0.188rem;
+    width: 100%;
+    height: 2.625rem;
+    padding: 0.2rem;
+    margin-left: 0.5rem;
+}
+
+/*HP %*/
+.hp-progress[data-v-57051149] {
+    background: red;
+    height: 2.25rem;
+    border-radius: 0.188rem;
+    transition: width .3s ease;
+}
+
+#overlay {
+    position: absolute;
+    left: 13.5rem;
+    top: 4rem;
+    color: #ffffff55;
+}
+
+/*ESC background blur*/
+.esc-interface[data-v-b427fee8]{
+    backdrop-filter: blur(var(--blur));
+}
+/*Default is 0.5, or 0 with a semi-transparent color*/
